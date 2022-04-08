@@ -5,7 +5,7 @@ prepareImageForDeal.py 用于图像的前处理
              新的样本文件名由原始图像文件名+时间戳+样本序号（非类型编号）组成。
 
 DayKerasReadImage.py 用于模型的建立
-       训练样本在'.\\TrainSet\\'目录下， （0~4）目录分别保存不同能见度等级处理后的图像
+       训练样本在'.\\TrainSet\\'目录下， （0~4）目录分别保存不同能见度等级处理后的图像，训练完成保存的模型文件是“rebuildModel.h5”
 
 readModelAndPredictAsingle.py 用于模型的预测
       对“.\\uploadmap\\”目录下“tempnew.png”文件进行图像预处理，处理后的图像保存在“.\\middelpic\\”目录下，模型对处理之后的图像进行预测，模型文件是“rebuildModel.h5”。
