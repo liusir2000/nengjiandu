@@ -1,11 +1,13 @@
-prepareImageForDeal.py ����ͼ���ǰ���� 
-       ʹ�õ������з�ʽ��
-       python prepareImageForDeal.py  [ԭʼͼ��] [���ͱ��]
-             ����֮��Ὣԭʼͼ������ģ��ѵ����Ҫ���µ�ͼ�����������ҽ���������������֮��������ͱ�ű��浽 r'.\\TrainSet\\' Ŀ¼�¶�Ӧ����Ŀ¼�С�
-             �µ������ļ�����ԭʼͼ���ļ���+ʱ���+������ţ������ͱ�ţ���ɡ�
+prepareImageForDeal.py 用于图像的前处理 
+       使用的命令行方式：
+       python prepareImageForDeal.py  [原始图像] [类型编号]
+             运行之后会将原始图像处理成模型训练需要的新的图像样本，并且将该样本进行扩充之后根据类型编号保存到 r'.\\TrainSet\\' 目录下对应的子目录中。
+             新的样本文件名由原始图像文件名+时间戳+样本序号（非类型编号）组成。
 
-DayKerasReadImage.py ����ģ�͵Ľ���
-       ѵ��������'.\\TrainSet\\'Ŀ¼�£� ��0~4��Ŀ¼�ֱ𱣴治ͬ�ܼ��ȵȼ��������ͼ��
+DayKerasReadImage.py 用于模型的建立
+       训练样本在'.\\TrainSet\\'目录下， （0~4）目录分别保存不同能见度等级处理后的图像
 
-readModelAndPredictAsingle.py ����ģ�͵�Ԥ��
-      �ԡ�.\\uploadmap\\��Ŀ¼�¡�tempnew.png���ļ�����ͼ��Ԥ�������������ͼ�񱣴��ڡ�.\\middelpic\\��Ŀ¼�£�ģ�ͶԴ���֮���ͼ�����Ԥ�⣬ģ���ļ��ǡ�rebuildModel.h5����
+readModelAndPredictAsingle.py 用于模型的预测
+      对“.\\uploadmap\\”目录下“tempnew.png”文件进行图像预处理，处理后的图像保存在“.\\middelpic\\”目录下，模型对处理之后的图像进行预测，模型文件是“rebuildModel.h5”。
+      
+data.rar为测试数据压缩，解压到本级目录，包含三个目录，学习样本保存在TrainSet目录夹
